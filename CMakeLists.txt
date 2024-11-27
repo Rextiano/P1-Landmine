@@ -3,9 +3,9 @@ project(P1_Landmine C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(src)
+include_directories(Project1LandmineGrid/src)
 
 add_executable(P1_Landmine
-    src/dijkstra.c
-    src/functions.h
-    src/program.c)
+        Project1LandmineGrid/src/dijkstra.c
+        Project1LandmineGrid/src/functions.h
+        Project1LandmineGrid/src/program.c)
