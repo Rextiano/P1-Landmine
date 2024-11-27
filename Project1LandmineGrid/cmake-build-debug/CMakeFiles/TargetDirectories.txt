@@ -1,0 +1,4 @@
+C:/Users/Patrick Brendstrup/CLionProjects/Project1LandmineGrid/cmake-build-debug/CMakeFiles/Project1LandmineGrid.dir
+C:/Users/Patrick Brendstrup/CLionProjects/Project1LandmineGrid/cmake-build-debug/CMakeFiles/landmineGame.dir
+C:/Users/Patrick Brendstrup/CLionProjects/Project1LandmineGrid/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Patrick Brendstrup/CLionProjects/Project1LandmineGrid/cmake-build-debug/CMakeFiles/rebuild_cache.dir
