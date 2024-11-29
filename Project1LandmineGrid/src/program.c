@@ -13,5 +13,11 @@ int main() {
     Node current = grid[0][0];
     printPath(l, w, grid, current);
 
+    Node nodes[GRID_SIZE * GRID_SIZE + 1];
+    findMandatoryNodes(4, 4, grid, nodes, 80);
+    for (int i = 0; i < GRID_SIZE * GRID_SIZE + 1; i++) {
+
+        printf("Node %d: (%d, %d)\n", i+1, nodes[i].x, nodes[i].y);
+    }
     return 0;
 }

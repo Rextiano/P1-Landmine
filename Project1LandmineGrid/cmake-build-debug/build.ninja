@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/
+cmake_ninja_workdir = C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target Project1LandmineGrid
 
@@ -49,6 +49,7 @@ cmake_ninja_workdir = C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1
 
 build cmake_object_order_depends_target_Project1LandmineGrid: phony || .
 
+<<<<<<< Updated upstream
 build CMakeFiles/Project1LandmineGrid.dir/src/landmineGame.c.obj: C_COMPILER__Project1LandmineGrid_unscanned_Debug C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src/landmineGame.c || cmake_object_order_depends_target_Project1LandmineGrid
   DEP_FILE = CMakeFiles\Project1LandmineGrid.dir\src\landmineGame.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
@@ -57,6 +58,9 @@ build CMakeFiles/Project1LandmineGrid.dir/src/landmineGame.c.obj: C_COMPILER__Pr
   OBJECT_FILE_DIR = CMakeFiles\Project1LandmineGrid.dir\src
 
 build CMakeFiles/Project1LandmineGrid.dir/src/main.c.obj: C_COMPILER__Project1LandmineGrid_unscanned_Debug C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src/main.c || cmake_object_order_depends_target_Project1LandmineGrid
+=======
+build CMakeFiles/Project1LandmineGrid.dir/src/main.c.obj: C_COMPILER__Project1LandmineGrid_unscanned_Debug C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/src/main.c || cmake_object_order_depends_target_Project1LandmineGrid
+>>>>>>> Stashed changes
   DEP_FILE = CMakeFiles\Project1LandmineGrid.dir\src\main.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src
@@ -90,17 +94,73 @@ build Project1LandmineGrid.exe: C_EXECUTABLE_LINKER__Project1LandmineGrid_Debug 
 
 build cmake_object_order_depends_target_dijkstra: phony || .
 
+<<<<<<< Updated upstream
 build CMakeFiles/dijkstra.dir/src/dijkstra.c.obj: C_COMPILER__dijkstra_unscanned_Debug C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src/dijkstra.c || cmake_object_order_depends_target_dijkstra
   DEP_FILE = CMakeFiles\dijkstra.dir\src\dijkstra.c.obj.d
+=======
+build CMakeFiles/landmineGame.dir/src/landmineGame.c.obj: C_COMPILER__landmineGame_unscanned_Debug C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/src/landmineGame.c || cmake_object_order_depends_target_landmineGame
+  DEP_FILE = CMakeFiles\landmineGame.dir\src\landmineGame.c.obj.d
+>>>>>>> Stashed changes
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src
   OBJECT_DIR = CMakeFiles\dijkstra.dir
   OBJECT_FILE_DIR = CMakeFiles\dijkstra.dir\src
 
+<<<<<<< Updated upstream
 build CMakeFiles/dijkstra.dir/src/program.c.obj: C_COMPILER__dijkstra_unscanned_Debug C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src/program.c || cmake_object_order_depends_target_dijkstra
   DEP_FILE = CMakeFiles\dijkstra.dir\src\program.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src
+  OBJECT_DIR = CMakeFiles\dijkstra.dir
+  OBJECT_FILE_DIR = CMakeFiles\dijkstra.dir\src
+=======
+build CMakeFiles/landmineGame.dir/src/main.c.obj: C_COMPILER__landmineGame_unscanned_Debug C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/src/main.c || cmake_object_order_depends_target_landmineGame
+  DEP_FILE = CMakeFiles\landmineGame.dir\src\main.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\landmineGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\landmineGame.dir\src
+>>>>>>> Stashed changes
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target dijkstra
+
+
+#############################################
+# Link the executable dijkstra.exe
+
+<<<<<<< Updated upstream
+build dijkstra.exe: C_EXECUTABLE_LINKER__dijkstra_Debug CMakeFiles/dijkstra.dir/src/dijkstra.c.obj CMakeFiles/dijkstra.dir/src/program.c.obj
+=======
+build landmineGame.exe: C_EXECUTABLE_LINKER__landmineGame_Debug CMakeFiles/landmineGame.dir/src/landmineGame.c.obj CMakeFiles/landmineGame.dir/src/main.c.obj
+>>>>>>> Stashed changes
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\dijkstra.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = dijkstra.exe
+  TARGET_IMPLIB = libdijkstra.dll.a
+  TARGET_PDB = dijkstra.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target dijkstra
+
+
+#############################################
+# Order-only phony target for dijkstra
+
+build cmake_object_order_depends_target_dijkstra: phony || .
+
+build CMakeFiles/dijkstra.dir/src/dijkstra.c.obj: C_COMPILER__dijkstra_unscanned_Debug C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/src/dijkstra.c || cmake_object_order_depends_target_dijkstra
+  DEP_FILE = CMakeFiles\dijkstra.dir\src\dijkstra.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\dijkstra.dir
+  OBJECT_FILE_DIR = CMakeFiles\dijkstra.dir\src
+
+build CMakeFiles/dijkstra.dir/src/program.c.obj: C_COMPILER__dijkstra_unscanned_Debug C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/src/program.c || cmake_object_order_depends_target_dijkstra
+  DEP_FILE = CMakeFiles\dijkstra.dir\src\program.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\dijkstra.dir
   OBJECT_FILE_DIR = CMakeFiles\dijkstra.dir\src
 
@@ -127,7 +187,7 @@ build dijkstra.exe: C_EXECUTABLE_LINKER__dijkstra_Debug CMakeFiles/dijkstra.dir/
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gunna\Documents\Datalogi\P1\P1-Landmine\Project1LandmineGrid\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D "C:\Yuusuf\Uni stuff\P1\P1-Landmine\Project1LandmineGrid\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -138,7 +198,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gunna\Documents\Datalogi\P1\P1-Landmine\Project1LandmineGrid\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\gunna\Documents\Datalogi\P1\P1-Landmine\Project1LandmineGrid -BC:\Users\gunna\Documents\Datalogi\P1\P1-Landmine\Project1LandmineGrid\cmake-build-debug"
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D "C:\Yuusuf\Uni stuff\P1\P1-Landmine\Project1LandmineGrid\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"C:\Yuusuf\Uni stuff\P1\P1-Landmine\Project1LandmineGrid" -B"C:\Yuusuf\Uni stuff\P1\P1-Landmine\Project1LandmineGrid\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -151,6 +211,11 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 build Project1LandmineGrid: phony Project1LandmineGrid.exe
 
 build dijkstra: phony dijkstra.exe
+<<<<<<< Updated upstream
+=======
+
+build landmineGame: phony landmineGame.exe
+>>>>>>> Stashed changes
 
 # =============================================================================
 # Folder targets.
@@ -158,9 +223,13 @@ build dijkstra: phony dijkstra.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug
+# Folder: C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug
 
+<<<<<<< Updated upstream
 build all: phony Project1LandmineGrid.exe dijkstra.exe
+=======
+build all: phony Project1LandmineGrid.exe landmineGame.exe dijkstra.exe
+>>>>>>> Stashed changes
 
 # =============================================================================
 # Built-in targets
@@ -169,14 +238,14 @@ build all: phony Project1LandmineGrid.exe dijkstra.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.2.1/bin/cmake/win/x64/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/CMakeLists.txt CMakeCache.txt CMakeFiles/3.29.6/CMakeCCompiler.cmake CMakeFiles/3.29.6/CMakeRCCompiler.cmake CMakeFiles/3.29.6/CMakeSystem.cmake: phony
 
 
 #############################################

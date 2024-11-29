@@ -11,7 +11,7 @@ void generateGridSameSettings(int length, int width, int bombs);
 int main(void) {
     int bombs = 0; //percentage of bombs
     //whatever is left is automatically safe spaces
-    int length, width;
+    int length, width, threshold;
     //ascii chars for bombs, double bombs and safe spaces
     char B = 'x', BB = '*', S = '#';
 
@@ -28,6 +28,9 @@ int main(void) {
 
         printf("Enter the length and width of the landmine field you want to explore (MAX size of 50x50):\n>");
         scanf("%d%d", &length, &width);
+
+        printf("Enter a threshold for the landmines\n");
+        scanf("%d", &threshold);
 
         if (length >= 50 || width >= 50) {
             printf("Size of grid is too big, must be below 50\n");

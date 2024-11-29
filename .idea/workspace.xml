@@ -3,6 +3,12 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -26,10 +32,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fd1398a4-2b6d-495a-808e-968bbebe958c" name="Changes" comment="Added empty functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Project1LandmineGrid/CMakeLists.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project1LandmineGrid/src/dijkstra.c" beforeDir="false" afterPath="$PROJECT_DIR$/Project1LandmineGrid/src/dijkstra.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project1LandmineGrid/src/functions.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project1LandmineGrid/src/functions.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project1LandmineGrid/src/program.c" beforeDir="false" afterPath="$PROJECT_DIR$/Project1LandmineGrid/src/program.c" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +63,12 @@
     &quot;assignee&quot;: &quot;Hamsterbil&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Rextiano/P1-Landmine&quot;,
-    &quot;accountId&quot;: &quot;8d0dadea-aafd-46c6-b879-b2c0019946d1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Rextiano/P1-Landmine.git",
+    "accountId": "1b744e56-83bf-4b6a-91e4-cdeba4ef6073"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Project1LandmineGrid/src/dijkstra.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project1LandmineGrid/src/functions.h" root0="FORCE_HIGHLIGHTING" />
@@ -89,7 +98,11 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "algorithm",
+<<<<<<< Updated upstream
     "last_opened_file_path": "C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid",
+=======
+    "last_opened_file_path": "C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid",
+>>>>>>> Stashed changes
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -110,6 +123,18 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+<<<<<<< Updated upstream
+=======
+    <configuration name="landmineGame" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project1LandmineGrid" TARGET_NAME="landmineGame" RUN_TARGET_PROJECT_NAME="Project1LandmineGrid" RUN_TARGET_NAME="landmineGame">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.landmineGame" />
+      <item itemvalue="CMake Application.Project1LandmineGrid" />
+    </list>
+>>>>>>> Stashed changes
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,6 +146,7 @@
       <updated>1732527468611</updated>
       <workItem from="1732527469683" duration="73000" />
       <workItem from="1732709131758" duration="10650000" />
+      <workItem from="1732882666059" duration="59000" />
     </task>
     <task id="LOCAL-00001" summary="Added empty functions">
       <option name="closed" value="true" />

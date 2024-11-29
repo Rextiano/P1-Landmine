@@ -1,4 +1,5 @@
 # ninja log v6
+<<<<<<< Updated upstream
 19	84	7545882222425185	CMakeFiles/Project1LandmineGrid.dir/src/program.c.obj	afe3adcbbcd0f6c0
 14	115	7545882222375203	CMakeFiles/Project1LandmineGrid.dir/src/main.c.obj	4b7e455a111148cb
 9	123	7545882222321577	CMakeFiles/Project1LandmineGrid.dir/src/landmineGame.c.obj	d0beedd20d4df13
@@ -56,3 +57,27 @@
 142	258	7545903043065764	dijkstra.exe	5c40fa2af6d68d16
 6	99	7545904995607155	CMakeFiles/dijkstra.dir/src/program.c.obj	be254fe19c828d95
 100	222	7545904996538142	dijkstra.exe	5c40fa2af6d68d16
+=======
+5	96	7545889095170167	CMakeFiles/Project1LandmineGrid.dir/src/main.c.obj	55ef6bba9753ef4
+97	199	7545889096085394	Project1LandmineGrid.exe	d5ea23ad5bfddcea
+2	73	7545894527325700	CMakeFiles/dijkstra.dir/src/dijkstra.c.obj	60b8ae6750fa01c5
+5	79	7545897568659870	CMakeFiles/dijkstra.dir/src/program.c.obj	dbf203de0acfd6d0
+80	184	7545897569403482	dijkstra.exe	5c40fa2af6d68d16
+11	89	7545900421252469	CMakeFiles/dijkstra.dir/src/program.c.obj	dbf203de0acfd6d0
+90	186	7545900422039524	dijkstra.exe	5c40fa2af6d68d16
+3	77	7545902259993246	CMakeFiles/dijkstra.dir/src/program.c.obj	dbf203de0acfd6d0
+77	178	7545902260727598	dijkstra.exe	5c40fa2af6d68d16
+11	84	7545902885320733	CMakeFiles/dijkstra.dir/src/dijkstra.c.obj	60b8ae6750fa01c5
+84	182	7545902886046359	dijkstra.exe	5c40fa2af6d68d16
+9	85	7545903692386535	CMakeFiles/dijkstra.dir/src/dijkstra.c.obj	60b8ae6750fa01c5
+18	97	7545903692471410	CMakeFiles/dijkstra.dir/src/program.c.obj	dbf203de0acfd6d0
+97	194	7545903693260994	dijkstra.exe	5c40fa2af6d68d16
+9	81	7545903817726348	CMakeFiles/dijkstra.dir/src/program.c.obj	dbf203de0acfd6d0
+81	184	7545903818445929	dijkstra.exe	5c40fa2af6d68d16
+11	84	7545903886570763	CMakeFiles/dijkstra.dir/src/dijkstra.c.obj	60b8ae6750fa01c5
+20	98	7545903886662489	CMakeFiles/dijkstra.dir/src/program.c.obj	dbf203de0acfd6d0
+99	194	7545903887442341	dijkstra.exe	5c40fa2af6d68d16
+9	76	7545905081216568	CMakeFiles/dijkstra.dir/src/dijkstra.c.obj	60b8ae6750fa01c5
+77	178	7545905081885789	dijkstra.exe	5c40fa2af6d68d16
+19	101	7545907416484730	CMakeFiles/dijkstra.dir/src/program.c.obj	dbf203de0acfd6d0
+>>>>>>> Stashed changes

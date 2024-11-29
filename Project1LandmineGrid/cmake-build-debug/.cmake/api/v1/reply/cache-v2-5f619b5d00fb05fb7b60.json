@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug"
+			"value" : "c:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -431,7 +431,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -503,7 +503,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid"
+			"value" : "C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug"
+			"value" : "C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug"
 		},
 		{
 			"name" : "Project1LandmineGrid_IS_TOP_LEVEL",
@@ -1159,7 +1159,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid"
+			"value" : "C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
