@@ -1,12 +1,5 @@
-<<<<<<< Updated upstream
-C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/Project1LandmineGrid.dir
-C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/dijkstra.dir
-C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-=======
 C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/Project1LandmineGrid.dir
 C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/landmineGame.dir
 C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/dijkstra.dir
 C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Yuusuf/Uni stuff/P1/P1-Landmine/Project1LandmineGrid/cmake-build-debug/CMakeFiles/rebuild_cache.dir
->>>>>>> Stashed changes

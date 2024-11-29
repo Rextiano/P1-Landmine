@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+
 #include "functions.h"
 
 int main() {
@@ -13,10 +15,12 @@ int main() {
     Node current = grid[0][0];
     printPath(l, w, grid, current);
 
-    Node nodes[GRID_SIZE * GRID_SIZE + 1];
-    findMandatoryNodes(4, 4, grid, nodes, 80);
-    for (int i = 0; i < GRID_SIZE * GRID_SIZE + 1; i++) {
+    Node nodes[l * w + 1];
+    int count = 0;
+    findMandatoryNodes(l, w, grid, nodes, 80, &count);
 
+    //for loop that runs through the found mandatory nodes that exceed the threshold and prints them
+    for (int i = 0; i < count; i++) {
         printf("Node %d: (%d, %d)\n", i+1, nodes[i].x, nodes[i].y);
     }
     return 0;

@@ -26,11 +26,7 @@
 	"objects" : 
 	[
 		{
-<<<<<<<< Updated upstream:Project1LandmineGrid/cmake-build-debug/.cmake/api/v1/reply/index-2024-11-29T12-58-03-0046.json
-			"jsonFile" : "codemodel-v2-429a75c771258af3b0ad.json",
-========
 			"jsonFile" : "codemodel-v2-9d2ad592d48e45a33df0.json",
->>>>>>>> Stashed changes:Project1LandmineGrid/cmake-build-debug/.cmake/api/v1/reply/index-2024-11-29T13-22-22-0007.json
 			"kind" : "codemodel",
 			"version" : 
 			{
@@ -90,11 +86,7 @@
 		},
 		"codemodel-v2" : 
 		{
-<<<<<<<< Updated upstream:Project1LandmineGrid/cmake-build-debug/.cmake/api/v1/reply/index-2024-11-29T12-58-03-0046.json
-			"jsonFile" : "codemodel-v2-429a75c771258af3b0ad.json",
-========
 			"jsonFile" : "codemodel-v2-9d2ad592d48e45a33df0.json",
->>>>>>>> Stashed changes:Project1LandmineGrid/cmake-build-debug/.cmake/api/v1/reply/index-2024-11-29T13-22-22-0007.json
 			"kind" : "codemodel",
 			"version" : 
 			{
