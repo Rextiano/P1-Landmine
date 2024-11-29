@@ -9,4 +9,4 @@ void nearestNeighbor(Node nodes, int count, int *order); //Algorithm to order ea
 int isValid(int x, int y, int l, int w); //Check if coordinate is within grid
 int distance(Node a, Node b); //Find distance between two nodes' coordinates to determine the closest
 void dijkstra(int l, int w, Node ref, Node tar, Node grid[l][w]); //Actual algorithm to determine best route from source to target
-void printPath(int l, int w, Node grid[l][w], Node current); //Print the result to debug
+void printPath(int l, int w, Node grid[l][w], Node current); //Print the result to work with
