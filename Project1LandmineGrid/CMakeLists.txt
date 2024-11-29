@@ -3,8 +3,12 @@ project(Project1LandmineGrid C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Project1LandmineGrid src/main.c)
-add_executable(landmineGame src/landmineGame.c
-        src/program.c
+include_directories(src)
+
+add_executable(Project1LandmineGrid
+        src/landmineGame.c
+        src/main.c)
+add_executable(dijkstra
         src/dijkstra.c
-        src/functions.h)
+        src/functions.h
+        src/program.c)
