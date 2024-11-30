@@ -17,7 +17,7 @@ void findMandatoryNodes(int l, int w, Node grid[l][w], Node nodes[l * w + 1], in
     }
 }
 
-void nearestNeighbor(Node nodes, int count, int *order)
+void nearestNeighbor(int count, Node nodes[count])
 {
 
 }
@@ -42,7 +42,7 @@ void printPath(int l, int w, Node grid[l][w], Node current)
     //Recursive function
     //Base case, if parent is -1 (no parent)
     if (grid[current.x][current.y].parent[0] == -1 && grid[current.x][current.y].parent[1] == -1) {
-        printf("(%d, %d)", current.x, current.y);
+        printf("(%d, %d)\n", current.x, current.y);
         return;
         }
 

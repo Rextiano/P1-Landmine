@@ -49,21 +49,21 @@ cmake_ninja_workdir = C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/cmake-bu
 
 build cmake_object_order_depends_target_P1_Landmine: phony || .
 
-build CMakeFiles/P1_Landmine.dir/src/dijkstra.c.obj: C_COMPILER__P1_Landmine_unscanned_Debug C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/src/dijkstra.c || cmake_object_order_depends_target_P1_Landmine
-  DEP_FILE = CMakeFiles\P1_Landmine.dir\src\dijkstra.c.obj.d
+build CMakeFiles/P1_Landmine.dir/Project1LandmineGrid/src/dijkstra.c.obj: C_COMPILER__P1_Landmine_unscanned_Debug C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src/dijkstra.c || cmake_object_order_depends_target_P1_Landmine
+  DEP_FILE = CMakeFiles\P1_Landmine.dir\Project1LandmineGrid\src\dijkstra.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/src
+  INCLUDES = -IC:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src
   OBJECT_DIR = CMakeFiles\P1_Landmine.dir
-  OBJECT_FILE_DIR = CMakeFiles\P1_Landmine.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\P1_Landmine.dir\Project1LandmineGrid\src
   TARGET_COMPILE_PDB = CMakeFiles\P1_Landmine.dir\
   TARGET_PDB = P1_Landmine.pdb
 
-build CMakeFiles/P1_Landmine.dir/src/program.c.obj: C_COMPILER__P1_Landmine_unscanned_Debug C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/src/program.c || cmake_object_order_depends_target_P1_Landmine
-  DEP_FILE = CMakeFiles\P1_Landmine.dir\src\program.c.obj.d
+build CMakeFiles/P1_Landmine.dir/Project1LandmineGrid/src/program.c.obj: C_COMPILER__P1_Landmine_unscanned_Debug C$:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src/program.c || cmake_object_order_depends_target_P1_Landmine
+  DEP_FILE = CMakeFiles\P1_Landmine.dir\Project1LandmineGrid\src\program.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/src
+  INCLUDES = -IC:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/Project1LandmineGrid/src
   OBJECT_DIR = CMakeFiles\P1_Landmine.dir
-  OBJECT_FILE_DIR = CMakeFiles\P1_Landmine.dir\src
+  OBJECT_FILE_DIR = CMakeFiles\P1_Landmine.dir\Project1LandmineGrid\src
   TARGET_COMPILE_PDB = CMakeFiles\P1_Landmine.dir\
   TARGET_PDB = P1_Landmine.pdb
 
@@ -75,7 +75,7 @@ build CMakeFiles/P1_Landmine.dir/src/program.c.obj: C_COMPILER__P1_Landmine_unsc
 #############################################
 # Link the executable P1_Landmine.exe
 
-build P1_Landmine.exe: C_EXECUTABLE_LINKER__P1_Landmine_Debug CMakeFiles/P1_Landmine.dir/src/dijkstra.c.obj CMakeFiles/P1_Landmine.dir/src/program.c.obj
+build P1_Landmine.exe: C_EXECUTABLE_LINKER__P1_Landmine_Debug CMakeFiles/P1_Landmine.dir/Project1LandmineGrid/src/dijkstra.c.obj CMakeFiles/P1_Landmine.dir/Project1LandmineGrid/src/program.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\P1_Landmine.dir
