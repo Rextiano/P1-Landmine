@@ -7,5 +7,4 @@ add_executable(Project1LandmineGrid src/main.c)
 add_executable(landmineGame src/landmineGame.c
                             src/main.c)
 add_executable(dijkstra src/dijkstra.c
-                        src/program.c
-                        src/functions.h)
+                        src/program.c)
