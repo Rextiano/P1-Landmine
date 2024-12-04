@@ -9,7 +9,7 @@ typedef struct { //Struct to better find positions of nodes
     int parent[2];
 } Node;
 
-int main() {
+int riskFactor() {
     FILE *fp;
     char grid[100][100];        // To hold symbols from the file
     Node numericGrid[100][100];  // To hold numeric values for processing
