@@ -1,11 +1,12 @@
-#include "functions.h"
+#include "dijkstra.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void findMandatoryNodes(int l, int w, Node grid[l][w], Node nodes[l * w + 1], int threshold, int* count) {
-
+void findMandatoryNodes(int l, int w, Node grid[l][w], Node nodes[l * w], Node startNode, int threshold, int* count) {
+    nodes[0] = startNode;
+    *count = 1;
     //for loop that loops through the whole grid to check for each node that is above the threshold
     for (int i = 0; i < w; i++) { //loop through each row
         for (int j = 0; j < l; j++) { //loop though each column
@@ -52,10 +53,10 @@ void nearestNeighbor(int count, Node nodes[count])
         routeCoordinate[i] = nodes[nextNode];
         currentNode = nextNode;
     }
-    //Print the order
-    printf("\nNearest neighbor:\n");
+
+    // printf("\nNearest neighbor:\n");
     for (int i = 0; i < count; i++) {
-        printf("Node %d, (%d, %d)\n", route[i] + 1, routeCoordinate[i].x, routeCoordinate[i].y);
+        // printf("Node %d, (%d, %d)\n", route[i] + 1, routeCoordinate[i].x, routeCoordinate[i].y);
         nodes[i] = routeCoordinate[i];
     }
 }
@@ -71,7 +72,7 @@ int isValid(int x, int y, int l, int w)
 }
 
 int minRisk(int l, int w, Node grid[l][w], int *min_x, int *min_y) {
-    int min = INF;
+    int min = INF; // Minimum is initially at the max possible value
 
     // Loop through each node in the grid
     for (int x = 0; x < l; x++) {
@@ -134,9 +135,9 @@ void dijkstra(int l, int w, Node grid[l][w], int srcX, int srcY, int tarX, int t
         }
     }
 
-    // Check if a path was found to the target
+    // Check if a path was found to the target and print
     if (tempGrid[tarX][tarY].parentX != -1 && tempGrid[tarX][tarY].parentY != -1) {
-        printf("|");
+        // printf("|");
         printPath(l, w, tempGrid, tarX, tarY);
     } else {
         printf("No path found to the target.\n");

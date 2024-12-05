@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S "C:\Users\gunna\Documents\Datalogi\Projekter\P1\P1-Landmine orig\src" -B "C:\Users\gunna\Documents\Datalogi\Projekter\P1\P1-Landmine orig\src\cmake-build-debug"
+"C:\Program Files\JetBrains\CLion 2024.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.2.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Users\gunna\Documents\Datalogi\Projekter\P1\P1-Landmine orig\src" -B "C:\Users\gunna\Documents\Datalogi\Projekter\P1\P1-Landmine orig\src\cmake-build-debug"
 CMake Warning (dev) in CMakeLists.txt:
   No project() command is present.  The top-level CMakeLists.txt file must
   contain a literal, direct call to the project() command.  Add a line of

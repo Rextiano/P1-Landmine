@@ -1,1 +1,1 @@
-add_executable(dijkstra dijkstra.c functions.h program.c)
+add_executable(program dijkstra.h grid.h dijkstra.c program.c RiskFactor.c LandmineGridGenerator.c)

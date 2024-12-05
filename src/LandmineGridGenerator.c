@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "grid.h"
 
 // The program takes user-input and makes a minefield grid (for further processing) that has double laid bombs equal to 10% of normal bombs
+char B = 'x', BB = '*', S = '#'; // ASCII chars for bombs, double bombs, and safe spaces
 
-// Function prototypes
-void generateGridNewSettings(int *length, int *width, int *bombs);
-void generateGridSameSettings(int length, int width, int bombs);
-
-int main(void) {
-    int previousLength = 0, previousWidth = 0, previousBombs = 0; // Variables to store previous settings
+void userInput(int *length, int *width) {
+    int previousBombs = 0; // Variables to store previous settings
 
     while (1) {
         int reply = 0;
@@ -19,17 +17,17 @@ int main(void) {
 
         if (reply == 1) {
             // Generate a new grid with new settings and store them
-            generateGridNewSettings(&previousLength, &previousWidth, &previousBombs);
+            generateGridNewSettings(length, width, &previousBombs);
         } else if (reply == 2) {
             // Generate a grid with the last used settings
-            if (previousLength > 0 && previousWidth > 0 && previousBombs > 0) {
-                generateGridSameSettings(previousLength, previousWidth, previousBombs);
+            if (*length > 0 && *width > 0 && previousBombs > 0) {
+                generateGridSameSettings(*length, *width, previousBombs);
             } else {
                 printf("No previous settings found. Please generate a grid with new settings first.\n");
             }
         } else if (reply == 3) {
             printf("Exiting program...\n");
-            return 0;
+            break;
         } else {
             printf("Invalid input. Please try again.\n");
         }
@@ -37,8 +35,6 @@ int main(void) {
 }
 
 void generateGridNewSettings(int *length, int *width, int *bombs) {
-    char B = 'x', BB = '*', S = '#'; // ASCII chars for bombs, double bombs, and safe spaces
-
     printf("%c are landmines\n%c are double laid landmines\n%c are safespaces \n", B, BB, S);
     printf("Enter the percentage of bomb coverage (max 80%%, 10%% of bombs will be double laid):\n>");
     scanf("%d", bombs);
@@ -60,7 +56,6 @@ void generateGridNewSettings(int *length, int *width, int *bombs) {
 }
 
 void generateGridSameSettings(int length, int width, int bombs) {
-    char B = 'x', BB = '*', S = '#'; // ASCII chars for bombs, double bombs, and safe spaces
     int totalSize = length * width;
     int amountOfBombs = (totalSize * bombs) / 100;
     int amountOfDoubleBombs = (totalSize * bombs * 0.1) / 100;
@@ -81,24 +76,9 @@ void generateGridSameSettings(int length, int width, int bombs) {
     }
 
     // Place bombs in the grid
-    for (int i = 0; i < amountOfBombs; i++) {
-        int row, col;
-        do {
-            row = rand() % length;
-            col = rand() % width;
-        } while (grid[row][col] != S); // Ensure only safe spaces are overwritten
-        grid[row][col] = B; // Place bomb
-    }
-
+    placeBomb(0, amountOfBombs, length, width, grid);
     // Place double bombs in the grid
-    for (int i = 0; i < amountOfDoubleBombs; i++) {
-        int row, col;
-        do {
-            row = rand() % length;
-            col = rand() % width;
-        } while (grid[row][col] != S); // Ensure only safe spaces are overwritten
-        grid[row][col] = BB; // Place double bomb
-    }
+    placeBomb(1, amountOfDoubleBombs, length, width, grid);
 
     // Print the final grid and save it to a file
     for (int i = 0; i < length; i++) {
@@ -112,4 +92,19 @@ void generateGridSameSettings(int length, int width, int bombs) {
 
     fflush(file);
     fclose(file);
+}
+
+void placeBomb(int isDoubleBomb, int bombAmount, int l, int w, char grid[l][w])
+{
+    for (int i = 0; i < bombAmount; i++) {
+        int row, col;
+        do {
+            row = rand() % l;
+            col = rand() % w;
+        } while (grid[row][col] != S); // Ensure only safe spaces are overwritten
+        if (isDoubleBomb)
+            grid[row][col] = BB; // Place double bomb
+        else
+            grid[row][col] = B; // Place normal bomb
+    }
 }
