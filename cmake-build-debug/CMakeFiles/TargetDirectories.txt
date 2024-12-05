@@ -1,3 +1,0 @@
-C:/Yuusuf/Uni stuff/P1/P1-Landmine/cmake-build-debug/CMakeFiles/P1_Landmine.dir
-C:/Yuusuf/Uni stuff/P1/P1-Landmine/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Yuusuf/Uni stuff/P1/P1-Landmine/cmake-build-debug/CMakeFiles/rebuild_cache.dir

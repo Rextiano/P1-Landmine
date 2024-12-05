@@ -1,7 +1,0 @@
-# ninja log v6
-108	216	7545933270931462	P1_Landmine.exe	bd7ee0a7cf2812fa
-16	107	7545933270016066	CMakeFiles/P1_Landmine.dir/Project1LandmineGrid/src/dijkstra.c.obj	452d42c7d0a82813
-30	128	7545933175752287	CMakeFiles/P1_Landmine.dir/Project1LandmineGrid/src/program.c.obj	1cefcdbdfa950f11
-26	111	7546784759012426	CMakeFiles/P1_Landmine.dir/Project1LandmineGrid/src/program.c.obj	8f9dfb7cd8522e9c
-22	116	7546784884133873	CMakeFiles/P1_Landmine.dir/Project1LandmineGrid/src/dijkstra.c.obj	848d092ebee9217f
-117	264	7546784885085691	P1_Landmine.exe	bd7ee0a7cf2812fa
