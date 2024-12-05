@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Project1LandmineGrid.exe"
+			"path" : "landmineGame.exe"
 		},
 		{
-			"path" : "Project1LandmineGrid.pdb"
+			"path" : "landmineGame.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 8,
 				"parent" : 0
 			}
 		]
@@ -52,11 +52,13 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
-	"id" : "Project1LandmineGrid::@6890427a1f51a3e7e1df",
+	"id" : "landmineGame::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +78,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "Project1LandmineGrid",
-	"nameOnDisk" : "Project1LandmineGrid.exe",
+	"name" : "landmineGame",
+	"nameOnDisk" : "landmineGame.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -89,7 +91,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
@@ -98,7 +102,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/landmineGame.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/main.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/dijkstra.c",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -55,6 +55,12 @@ build CMakeFiles/Project1LandmineGrid.dir/src/main.c.obj: C_COMPILER__Project1La
   OBJECT_DIR = CMakeFiles\Project1LandmineGrid.dir
   OBJECT_FILE_DIR = CMakeFiles\Project1LandmineGrid.dir\src
 
+build CMakeFiles/Project1LandmineGrid.dir/src/dijkstra.c.obj: C_COMPILER__Project1LandmineGrid_unscanned_Debug C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/src/dijkstra.c || cmake_object_order_depends_target_Project1LandmineGrid
+  DEP_FILE = CMakeFiles\Project1LandmineGrid.dir\src\dijkstra.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Project1LandmineGrid.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project1LandmineGrid.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Project1LandmineGrid
@@ -63,7 +69,7 @@ build CMakeFiles/Project1LandmineGrid.dir/src/main.c.obj: C_COMPILER__Project1La
 #############################################
 # Link the executable Project1LandmineGrid.exe
 
-build Project1LandmineGrid.exe: C_EXECUTABLE_LINKER__Project1LandmineGrid_Debug CMakeFiles/Project1LandmineGrid.dir/src/main.c.obj
+build Project1LandmineGrid.exe: C_EXECUTABLE_LINKER__Project1LandmineGrid_Debug CMakeFiles/Project1LandmineGrid.dir/src/main.c.obj CMakeFiles/Project1LandmineGrid.dir/src/dijkstra.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Project1LandmineGrid.dir
@@ -94,6 +100,12 @@ build CMakeFiles/landmineGame.dir/src/main.c.obj: C_COMPILER__landmineGame_unsca
   OBJECT_DIR = CMakeFiles\landmineGame.dir
   OBJECT_FILE_DIR = CMakeFiles\landmineGame.dir\src
 
+build CMakeFiles/landmineGame.dir/src/dijkstra.c.obj: C_COMPILER__landmineGame_unscanned_Debug C$:/Yuusuf/Uni$ stuff/P1/P1-Landmine/Project1LandmineGrid/src/dijkstra.c || cmake_object_order_depends_target_landmineGame
+  DEP_FILE = CMakeFiles\landmineGame.dir\src\dijkstra.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\landmineGame.dir
+  OBJECT_FILE_DIR = CMakeFiles\landmineGame.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target landmineGame
@@ -102,7 +114,7 @@ build CMakeFiles/landmineGame.dir/src/main.c.obj: C_COMPILER__landmineGame_unsca
 #############################################
 # Link the executable landmineGame.exe
 
-build landmineGame.exe: C_EXECUTABLE_LINKER__landmineGame_Debug CMakeFiles/landmineGame.dir/src/landmineGame.c.obj CMakeFiles/landmineGame.dir/src/main.c.obj
+build landmineGame.exe: C_EXECUTABLE_LINKER__landmineGame_Debug CMakeFiles/landmineGame.dir/src/landmineGame.c.obj CMakeFiles/landmineGame.dir/src/main.c.obj CMakeFiles/landmineGame.dir/src/dijkstra.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\landmineGame.dir

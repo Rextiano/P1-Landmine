@@ -17,7 +17,7 @@ int main() {
 
     Node nodes[l * w + 1];
     int count = 0;
-    findMandatoryNodes(l, w, grid, nodes, 80, &count);
+    findMandatoryNodes(l, w, grid, nodes, 40, &count);
     Node mandatoryNodes[count];
 
     //for loop that runs through the found mandatory nodes that exceed the threshold and prints them
@@ -27,12 +27,12 @@ int main() {
     }
 
     nearestNeighbor(count, mandatoryNodes);
-    for (int i = 0; i < count; i++)
-    {
-        dijkstra(l, w, mandatoryNodes[i], mandatoryNodes[i + 1], grid);
-    }
+    // for (int i = 0; i < count; i++)
+    // {
+    //     dijkstra(l, w, mandatoryNodes[i], mandatoryNodes[i + 1], grid);
+    // }
 
-    printPath(l, w, grid, mandatoryNodes[0]);
+    // printPath(l, w, grid, mandatoryNodes[0]);
 
     return 0;
 }

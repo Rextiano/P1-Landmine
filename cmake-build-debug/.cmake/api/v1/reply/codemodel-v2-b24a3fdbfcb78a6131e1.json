@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "P1_Landmine::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-P1_Landmine-Debug-6d0b6db203522115e4ce.json",
+					"jsonFile" : "target-P1_Landmine-Debug-e72beb8a5fc44b043049.json",
 					"name" : "P1_Landmine",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine/cmake-build-debug",
-		"source" : "C:/Users/gunna/Documents/Datalogi/P1/P1-Landmine"
+		"build" : "C:/Yuusuf/Uni stuff/P1/P1-Landmine/cmake-build-debug",
+		"source" : "C:/Yuusuf/Uni stuff/P1/P1-Landmine"
 	},
 	"version" : 
 	{

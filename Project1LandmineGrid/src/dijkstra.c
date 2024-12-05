@@ -19,6 +19,44 @@ void findMandatoryNodes(int l, int w, Node grid[l][w], Node nodes[l * w + 1], in
 
 void nearestNeighbor(int count, Node nodes[count])
 {
+    int visitedNodes[count];// Array to check if each node has been visited
+    int route[count];// Array for the final route
+    Node routeCoordinate[count];// Array for coordinates of final route
+    for (int i = 0; i < count; i++) { //Set all nodes as unvisited
+        visitedNodes[i] = 0;
+    }
+
+    int currentNode = 0;
+    visitedNodes[currentNode] = 1;
+    route[0] = currentNode;
+    routeCoordinate[0] = nodes[currentNode];
+
+    for (int i = 1; i < count; i++) {
+        double tempDist = INT_MAX; //Set the initial distance to infinite so the first found distance is always shorter
+        int nextNode = -1;
+
+        for (int j = 0; j < count; j++) {
+            if (!visitedNodes[j]) {
+                double minDistance = distance(nodes[currentNode], nodes[j]); //distance between current node and unvisited nodes gets calculated
+                if (minDistance < tempDist) {
+                    //If the distance is smaller than the current distance it gets saved as the new distance and the next node changes to the closed node
+                    tempDist = minDistance;
+                    nextNode = j;
+                }
+            }
+        }
+        //After the closest unvisited node is found, it gets set to visited and added to the route
+        visitedNodes[nextNode] = 1;
+        route[i] = nextNode;
+        routeCoordinate[i] = nodes[nextNode];
+        currentNode = nextNode;
+    }
+    //Print the route
+    // printf("\n");
+    printf("\nNearest neighbor:\n");
+    for (int i = 0; i < count; i++) {
+        printf("Node %d, (%d, %d)\n", route[i] + 1, routeCoordinate[i].x, routeCoordinate[i].y);
+    }
 
 }
 
