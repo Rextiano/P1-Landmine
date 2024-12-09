@@ -153,7 +153,7 @@ void savePath(int l, int w, Node grid[l][w], int x, int y, int isTarget) {
         return;
 
     savePath(l, w, grid, grid[x][y].parentX, grid[x][y].parentY, 0);
-    printf(" -> (%d, %d)", x, y);
+    // printf(" -> (%d, %d)", x, y);
     if (!isTarget)
         path_coordinates[final_count++] = (Coord){x, y, 0};
     else
@@ -167,7 +167,6 @@ void printGrid(int l, int w)
     coordinates[0] = (Coord){0, 0, 1};
     for (int i = 0; i < final_count; i++)
         coordinates[i + 1] = path_coordinates[i];
-    printf("\n");
     for (int i = 0; i < final_count; i++)
         printf("(%d, %d) -> ", coordinates[i].x, coordinates[i].y);
     // IDK how it should be visualised, but coords are saved now

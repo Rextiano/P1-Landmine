@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "grid.h"
 
 int main() {
@@ -13,7 +14,8 @@ int main() {
     // Everything above is simply the hypothetical drone capturing data and outputting a grid
     // Here is where we use the data
     int threshold = 0;
-    scanf("What should the threshold percentage be?", &threshold);
+    printf("What should the threshold percentage be?\n");
+    scanf("%d", &threshold);
 
     // Find all mandatory nodes in the grid
     Node nodes[l * w];
@@ -30,10 +32,9 @@ int main() {
     // Run nearest neighbour to sort list of mandatory nodes
     nearestNeighbor(count, mandatoryNodes);
 
-    printf("Shortest and safest path from source (%d, %d) to destination (%d, %d):\n(%d, %d)",
+    printf("Shortest and safest path from source (%d, %d) to destination (%d, %d):\n",
         mandatoryNodes[0].x, mandatoryNodes[0].y,
-        mandatoryNodes[count - 1].x, mandatoryNodes[count - 1].y,
-        mandatoryNodes[0].x, mandatoryNodes[0].y);
+        mandatoryNodes[count - 1].x, mandatoryNodes[count - 1].y);
 
     // Run dijkstra to find the safest path between each mandatory node
     for (int i = 0; i < count - 1; i++)
@@ -41,7 +42,9 @@ int main() {
     printGrid(l, w);
 
     // See result before program closes
-    printf("Press key to close\n");
+    while (getchar() != '\n');
+
+    printf("\nProgram finished. Press enter to exit...\n");
     getchar();
     return 0;
 }
