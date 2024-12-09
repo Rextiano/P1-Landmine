@@ -47,8 +47,8 @@ void generateGridNewSettings(int *length, int *width, int *bombs) {
     printf("Enter the length and width of the landmine field (MAX size of 50x50):\n>");
     scanf("%d%d", length, width);
 
-    if (*length >= 50 || *width >= 50) {
-        printf("Grid size too large, must be below 50x50.\n");
+    if (*length >= 51 || *width >= 51) {
+        printf("Grid size too large, must be 50x50 or below.\n");
         return; // Exit function to reattempt
     }
 
