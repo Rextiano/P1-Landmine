@@ -46,9 +46,9 @@ void riskFactor(int rows, int cols, Node grid[rows][cols]) {
     }
 
     // First, apply +50 to '#' next to '*'
-    applyRisk(rows, cols, grid, adjustedGrid, grid, 50, '#', '*');
+    applyRisk(rows, cols, fileGrid, adjustedGrid, grid, 50, '#', '*');
     // Then, apply +30 to '#' next to 'x' if not already adjusted
-    applyRisk(rows, cols, grid, adjustedGrid, grid, 30, '#', 'x');
+    applyRisk(rows, cols, fileGrid, adjustedGrid, grid, 30, '#', 'x');
 
     // Print the modified numeric grid in the desired format
     for (int i = 0; i < rows; i++) {

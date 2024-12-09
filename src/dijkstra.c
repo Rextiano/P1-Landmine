@@ -4,15 +4,24 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct
+{
+    int x;
+    int y;
+    int target;
+} Coord;
+
+Coord path_coordinates[1000];
+int final_count = 0;
+
 void findMandatoryNodes(int l, int w, Node grid[l][w], Node nodes[l * w], Node startNode, int threshold, int* count) {
     nodes[0] = startNode;
     *count = 1;
     //for loop that loops through the whole grid to check for each node that is above the threshold
     for (int i = 0; i < w; i++) { //loop through each row
         for (int j = 0; j < l; j++) { //loop though each column
-            if (grid[i][j].risk >= threshold){
-                nodes[*count].x = i;
-                nodes[*count].y = j;
+            if (grid[i][j].risk >= threshold && grid[i][j].risk <= 100 && i != startNode.x && j != startNode.y){
+                nodes[*count] = grid[i][j];
                 *count += 1;
             }
         }
@@ -21,25 +30,20 @@ void findMandatoryNodes(int l, int w, Node grid[l][w], Node nodes[l * w], Node s
 
 void nearestNeighbor(int count, Node nodes[count])
 {
-    int visitedNodes[count];// Array to check if each node has been visited
-    int route[count];// Array for the final route
-    Node routeCoordinate[count];// Array for coordinates of final route
-    for (int i = 0; i < count; i++) { //Set all nodes as unvisited
-        visitedNodes[i] = 0;
-    }
-
+    Node routeCoordinate[count]; // Array for coordinates of final route
     int currentNode = 0;
-    visitedNodes[currentNode] = 1;
-    route[0] = currentNode;
+
+    // Setting node to visited does not ruin anything since Dijkstra only uses the coordinates of the node
+    nodes[currentNode].visited = 1;
     routeCoordinate[0] = nodes[currentNode];
 
     for (int i = 1; i < count; i++) {
-        double tempDist = INT_MAX; //Set the initial distance to infinite so the first found distance is always shorter
+        double tempDist = INF; //Set the initial distance to infinite so the first found distance is always shorter
         int nextNode = -1;
 
         for (int j = 0; j < count; j++) {
-            if (!visitedNodes[j]) {
-                double minDistance = distance(nodes[currentNode], nodes[j]); //distance between current node and unvisited nodes gets calculated
+            if (!nodes[j].visited) {
+                int minDistance = distance(nodes[currentNode], nodes[j]); //distance between current node and unvisited nodes gets calculated
                 if (minDistance < tempDist) {
                     //If the distance is smaller than the current distance it gets saved as the new distance and the next node changes to the closed node
                     tempDist = minDistance;
@@ -48,22 +52,20 @@ void nearestNeighbor(int count, Node nodes[count])
             }
         }
         //After the closest unvisited node is found, it gets set to visited and added to the route
-        visitedNodes[nextNode] = 1;
-        route[i] = nextNode;
+        nodes[nextNode].visited = 1;
         routeCoordinate[i] = nodes[nextNode];
         currentNode = nextNode;
     }
 
     // printf("\nNearest neighbor:\n");
     for (int i = 0; i < count; i++) {
-        // printf("Node %d, (%d, %d)\n", route[i] + 1, routeCoordinate[i].x, routeCoordinate[i].y);
         nodes[i] = routeCoordinate[i];
     }
 }
 
 int distance(Node a, Node b)
 {
-    return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2)); //Check distance between two coordinates
+    return abs(a.x - b.x) + abs(a.y - b.y);; //Check distance between two coordinates. Manhattan distance
 }
 
 int isValid(int x, int y, int l, int w)
@@ -115,20 +117,22 @@ void dijkstra(int l, int w, Node grid[l][w], int srcX, int srcY, int tarX, int t
         tempGrid[x][y].visited = 1;
 
         // Update the tempRisk of neighbors around chosen coordinate
-        for (int i = -1; i <= 1; i++) { // Up, Down
-            for (int j = -1; j <= 1; j++) { // Left, Right
+        for (int i = -1; i <= 1; i++) { // Left, Right
+            for (int j = -1; j <= 1; j++) { // Up, Down
                 // Disregard diagonal. Sum of difference will always be 1 for orthogonal
                 if (abs(i) + abs(j) != 1)
                     continue;
 
+                int nX = x + i;
+                int nY = y + j;
                 // Determine if neighbour coordinates are within the grid
-                if (isValid(x + i, y + j, l, w)) {
-                    int totalRisk = tempGrid[x][y].tempRisk + tempGrid[x + i][y + j].risk;
+                if (isValid(nX, nY, l, w) && tempGrid[nX][nY].risk <= 100) {
+                    int totalRisk = tempGrid[x][y].tempRisk + tempGrid[nX][nY].risk;
                     // Determine if neighbour already has been visited and it is the shortest path compared to known
-                    if (!tempGrid[x + i][y + j].visited && totalRisk < tempGrid[x + i][y + j].tempRisk) {
-                        tempGrid[x + i][y + j].tempRisk = totalRisk;
-                        tempGrid[x + i][y + j].parentX = x;
-                        tempGrid[x + i][y + j].parentY = y;
+                    if (!tempGrid[nX][nY].visited && totalRisk < tempGrid[nX][nY].tempRisk) {
+                        tempGrid[nX][nY].tempRisk = totalRisk;
+                        tempGrid[nX][nY].parentX = x;
+                        tempGrid[nX][nY].parentY = y;
                     }
                 }
             }
@@ -137,18 +141,34 @@ void dijkstra(int l, int w, Node grid[l][w], int srcX, int srcY, int tarX, int t
 
     // Check if a path was found to the target and print
     if (tempGrid[tarX][tarY].parentX != -1 && tempGrid[tarX][tarY].parentY != -1) {
-        // printf("|");
-        printPath(l, w, tempGrid, tarX, tarY);
+        savePath(l, w, tempGrid, tarX, tarY, 1);
     } else {
         printf("No path found to the target.\n");
     }
 }
 
-void printPath(int l, int w, Node grid[l][w], int x, int y) {
+void savePath(int l, int w, Node grid[l][w], int x, int y, int isTarget) {
     // Base case, stop when no parent
     if (grid[x][y].parentX == -1 && grid[x][y].parentY == -1)
         return;
 
-    printPath(l, w, grid, grid[x][y].parentX, grid[x][y].parentY);
+    savePath(l, w, grid, grid[x][y].parentX, grid[x][y].parentY, 0);
     printf(" -> (%d, %d)", x, y);
+    if (!isTarget)
+        path_coordinates[final_count++] = (Coord){x, y, 0};
+    else
+        path_coordinates[final_count++] = (Coord){x, y, 1};
+}
+
+void printGrid(int l, int w)
+{
+    final_count += 1;
+    Coord coordinates[final_count];
+    coordinates[0] = (Coord){0, 0, 1};
+    for (int i = 0; i < final_count; i++)
+        coordinates[i + 1] = path_coordinates[i];
+    printf("\n");
+    for (int i = 0; i < final_count; i++)
+        printf("(%d, %d) -> ", coordinates[i].x, coordinates[i].y);
+    // IDK how it should be visualised, but coords are saved now
 }

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "grid.h"
 
 // The program takes user-input and makes a minefield grid (for further processing) that has double laid bombs equal to 10% of normal bombs
@@ -39,7 +40,7 @@ void generateGridNewSettings(int *length, int *width, int *bombs) {
     printf("Enter the percentage of bomb coverage (max 80%%, 10%% of bombs will be double laid):\n>");
     scanf("%d", bombs);
 
-    if (*bombs >= 81) {
+    if (*bombs > 80) {
         printf("Bomb percentage must be max 80.\n");
         return; // Exit function to reattempt
     }
@@ -47,9 +48,9 @@ void generateGridNewSettings(int *length, int *width, int *bombs) {
     printf("Enter the length and width of the landmine field (MAX size of 50x50):\n>");
     scanf("%d%d", length, width);
 
-    if (*length >= 50 || *width >= 50) {
-        printf("Grid size too large, must be below 50x50.\n");
-        return; // Exit function to reattempt
+    if (*length > 50 || *width > 50) {
+        printf("Grid size too large, must be below 51x51.\n");
+        return;
     }
 
     generateGridSameSettings(*length, *width, *bombs); // Use common function for grid generation
@@ -96,6 +97,7 @@ void generateGridSameSettings(int length, int width, int bombs) {
 
 void placeBomb(int isDoubleBomb, int bombAmount, int l, int w, char grid[l][w])
 {
+    srand(time(NULL));
     for (int i = 0; i < bombAmount; i++) {
         int row, col;
         do {
