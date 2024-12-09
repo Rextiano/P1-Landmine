@@ -12,7 +12,7 @@ void userInput(int *length, int *width) {
         int reply = 0;
         printf("Enter 1 to generate a new grid with new settings\n");
         printf("Enter 2 to generate a new grid with previous settings\n");
-        printf("Enter 3 to exit\n>");
+        printf("Enter 3 to proceed\n>");
         scanf("%d", &reply);
 
         if (reply == 1) {
