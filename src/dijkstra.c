@@ -17,10 +17,12 @@ int final_count = 0;
 void findMandatoryNodes(int l, int w, Node grid[l][w], Node nodes[l * w], Node startNode, int threshold, int* count) {
     nodes[0] = startNode;
     *count = 1;
+    int risk = 0;
     //for loop that loops through the whole grid to check for each node that is above the threshold
-    for (int i = 0; i < w; i++) { //loop through each row
-        for (int j = 0; j < l; j++) { //loop though each column
-            if (grid[i][j].risk >= threshold && grid[i][j].risk <= 100 && i != startNode.x && j != startNode.y){
+    for (int i = 0; i < l; i++) { //loop through each row
+        for (int j = 0; j < w; j++) { //loop though each column
+            risk = grid[i][j].risk;
+            if (risk >= threshold && risk <= 100 && (i != startNode.x && j != startNode.y)){
                 nodes[*count] = grid[i][j];
                 *count += 1;
             }
@@ -143,7 +145,7 @@ void dijkstra(int l, int w, Node grid[l][w], int srcX, int srcY, int tarX, int t
     if (tempGrid[tarX][tarY].parentX != -1 && tempGrid[tarX][tarY].parentY != -1) {
         savePath(l, w, tempGrid, tarX, tarY, 1);
     } else {
-        printf("No path found to the target.\n");
+        printf("(%d, %d) -> (%d, %d) No path found to the target.\n", srcX, srcY, tarX, tarY);
     }
 }
 
@@ -169,5 +171,6 @@ void printGrid(int l, int w)
         coordinates[i + 1] = path_coordinates[i];
     for (int i = 0; i < final_count; i++)
         printf("(%d, %d) -> ", coordinates[i].x, coordinates[i].y);
+
     // IDK how it should be visualised, but coords are saved now
 }

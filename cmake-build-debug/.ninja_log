@@ -1,0 +1,22 @@
+# ninja log v6
+10	150	7555333435221798	src/CMakeFiles/program.dir/program.c.obj	daf5443337c97c0c
+21	156	7555333435331769	src/CMakeFiles/program.dir/LandmineGridGenerator.c.obj	202b6d08660f3916
+15	156	7555333435281742	src/CMakeFiles/program.dir/RiskFactor.c.obj	97a715af2440381e
+2	169	7555333435152139	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+169	372	7555333436814194	src/program.exe	ba771316a5e68145
+13	133	7555339100055995	src/CMakeFiles/program.dir/RiskFactor.c.obj	97a715af2440381e
+6	145	7555339099975993	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+3	93	7555339473308566	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+6	149	7555339814655319	src/program.exe	ba771316a5e68145
+6	129	7555341658146501	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+129	246	7555341659375843	src/program.exe	ba771316a5e68145
+5	138	7555342578696929	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+138	292	7555342580030749	src/program.exe	ba771316a5e68145
+5	122	7555343509897788	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+122	247	7555343511062155	src/program.exe	ba771316a5e68145
+5	123	7555347701349182	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+124	267	7555347702534398	src/program.exe	ba771316a5e68145
+5	115	7555347956005842	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+116	217	7555347957112242	src/program.exe	ba771316a5e68145
+6	136	7555352595323310	src/CMakeFiles/program.dir/dijkstra.c.obj	b494ebcf1aa8d2ce
+136	248	7555352596624025	src/program.exe	ba771316a5e68145

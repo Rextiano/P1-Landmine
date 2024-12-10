@@ -1,3 +1,0 @@
-C:/Users/gunna/Documents/Datalogi/Projekter/P1/P1-Landmine orig/src/cmake-build-debug/CMakeFiles/program.dir
-C:/Users/gunna/Documents/Datalogi/Projekter/P1/P1-Landmine orig/src/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/gunna/Documents/Datalogi/Projekter/P1/P1-Landmine orig/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir

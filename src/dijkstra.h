@@ -15,4 +15,4 @@ int isValid(int x, int y, int l, int w); // Check if coordinate is within grid
 int minRisk(int l, int w, Node grid[l][w], int *min_x, int *min_y);
 void dijkstra(int l, int w, Node grid[l][w], int srcX, int srcY, int tarX, int tarY); // Actual algorithm to determine best route from source to target
 void savePath(int l, int w, Node grid[l][w], int x, int y, int isTarget); // Saves the found path for printGrid() to use
-void printGrid();
+void printGrid(int l, int w);
