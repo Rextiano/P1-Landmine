@@ -1,4 +1,3 @@
-#include <time.h>
 #include "grid.h"
 
 void riskFactor(Node grid[l][w]) {

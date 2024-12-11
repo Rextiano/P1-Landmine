@@ -24,27 +24,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffe37b6d-86c2-4c25-bdd1-814de04fbc5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-ba3042303899c47a7bf1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-12-10T11-28-56-0899.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-program-Debug-84ad4496180e1b3a5eb8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/program.dir/LandmineGridGenerator.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/program.dir/LandmineGridGenerator.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/program.dir/RiskFactor.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/program.dir/RiskFactor.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/program.dir/dijkstra.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/program.dir/dijkstra.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/program.dir/program.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/program.dir/program.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/landmineGrid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/landmineGrid.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/program.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/program.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LandmineGridGenerator.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/LandmineGridGenerator.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RiskFactor.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/RiskFactor.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dijkstra.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/dijkstra.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dijkstra.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/dijkstra.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/grid.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/grid.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/program.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/program.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733830040228</updated>
       <workItem from="1733830041456" duration="3051000" />
-      <workItem from="1733833527279" duration="16223000" />
+      <workItem from="1733833527279" duration="16488000" />
     </task>
     <servers />
   </component>

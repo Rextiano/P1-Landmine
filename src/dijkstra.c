@@ -1,7 +1,7 @@
 #include "dijkstra.h"
 
-Coord path_coordinates[1000]; // Now defined
-int final_count = 0;          // Now defined
+Coord path_coordinates[2500];
+int final_count = 0;
 
 void findMandatoryNodes(Node grid[l][w], Node nodes[l * w], Node startNode, int threshold, int* count) {
     printf("\nFinding mandatory nodes...\n");
@@ -184,14 +184,14 @@ void printGrid()
     coordinates[0] = (Coord){0, 0, 1};
     for (int i = 0; i < final_count; i++)
         coordinates[i + 1] = path_coordinates[i];
-
+    printf("Final count %d", final_count);
     for (int i = 0; i < final_count; i++) {
         if (i != final_count - 1)
             printf("(%d, %d) -> ", coordinates[i].x, coordinates[i].y);
         else
             printf("(%d, %d)", coordinates[i].x, coordinates[i].y);
     }
-    
+
     printf("\n\nFinal route:");
 
     int target = 0;
