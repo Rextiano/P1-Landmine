@@ -1,18 +1,26 @@
-#define INF 9999
+#ifndef DIJKSTRA_H
+#define DIJKSTRA_H
 
-typedef struct{
+#include "main.h"
+#include <string.h>
+
+// Coordinate structure for storing paths
+typedef struct {
     int x, y;
-    int risk;
-    int tempRisk; // Tentative risk value
-    int visited; // Flag to indicate if the cell has been visited
-    int parentX, parentY;
-} Node;
+    int target;
+} Coord;
 
-void findMandatoryNodes(int l, int w, Node grid[l][w], Node nodes[l * w], Node startNode, int threshold, int* count); // Should update a list of mandatory nodes (coordinates with values above threshold)
-void nearestNeighbor(int count, Node nodes[count]); // Algorithm to order each mandatory node found by closest coordinates
-int distance(Node a, Node b); // Distance between coordinates
-int isValid(int x, int y, int l, int w); // Check if coordinate is within grid
-int minRisk(int l, int w, Node grid[l][w], int *min_x, int *min_y);
-void dijkstra(int l, int w, Node grid[l][w], int srcX, int srcY, int tarX, int tarY); // Actual algorithm to determine best route from source to target
-void savePath(int l, int w, Node grid[l][w], int x, int y, int isTarget); // Saves the found path for printGrid() to use
-void printGrid(int l, int w);
+extern Coord path_coordinates[1000];
+extern int final_count;
+
+// Functions related to finding paths and processing nodes
+void findMandatoryNodes(Node grid[l][w], Node nodes[l * w], Node startNode, int threshold, int *count);
+void nearestNeighbor(int count, Node nodes[count]);
+int distance(Node a, Node b);
+int isValid(int x, int y);
+int minRisk(Node tempGrid[l][w], int *min_x, int *min_y);
+void dijkstra(Node grid[l][w], int srcX, int srcY, int tarX, int tarY);
+void savePath(Node tempGrid[l][w], int x, int y, int isTarget);
+void printGrid();
+
+#endif // DIJKSTRA_H

@@ -52,10 +52,10 @@
 			},
 			"sourceIndexes" : 
 			[
-				2,
 				3,
 				4,
-				5
+				5,
+				6
 			]
 		}
 	],
@@ -93,17 +93,18 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				2,
 				3,
 				4,
-				5
+				5,
+				6
 			]
 		}
 	],
@@ -117,6 +118,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/grid.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/main.h",
 			"sourceGroupIndex" : 0
 		},
 		{
