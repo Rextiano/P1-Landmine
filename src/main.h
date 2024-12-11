@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 #define INF 9999
+#define RESET "\033[0m"
 
 // Node structure representing a grid cell
 typedef struct {

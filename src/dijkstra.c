@@ -56,7 +56,8 @@ void nearestNeighbor(int count, Node nodes[count])
         nodes[i] = routeCoordinate[i];
     }
 
-    printf("\nShortest and safest path from source (%d, %d) to destination (%d, %d):\n",
+    printf("\nFinding shortest path...\n");
+    printf("Shortest and safest path from source (%d, %d) to destination (%d, %d):\n",
         nodes[0].x, nodes[0].y,
         nodes[count - 1].x, nodes[count - 1].y);
 }
@@ -158,11 +159,6 @@ void savePath(Node grid[l][w], int x, int y, int isTarget) {
         path_coordinates[final_count++] = (Coord){x, y, 1};
 }
 
-#define RED "\033[1;31m"
-#define YELLOW "\033[1;33m"
-#define GREEN "\033[0;32m"
-#define RESET "\033[0m"
-
 char* getGradientColor(int progress) {
     static char colorStr[50];  // Static to preserve the string across function calls
 
@@ -184,7 +180,8 @@ void printGrid()
     coordinates[0] = (Coord){0, 0, 1};
     for (int i = 0; i < final_count; i++)
         coordinates[i + 1] = path_coordinates[i];
-    printf("Final count %d", final_count);
+    printf("Final count: %d coordinates\n", final_count);
+    printf("Entire list:\n");
     for (int i = 0; i < final_count; i++) {
         if (i != final_count - 1)
             printf("(%d, %d) -> ", coordinates[i].x, coordinates[i].y);
@@ -222,4 +219,50 @@ void printGrid()
         }
     }
     printf("\n");
+    algorithmAccuracy(coordinates);
+}
+
+void algorithmAccuracy(Coord coords[final_count])
+{
+    FILE *fp;
+    fp = fopen("landmineGrid.txt", "r");
+    if (fp == NULL) {
+        printf("Error opening file.\n");
+    }
+
+    char charGrid[l][w];
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < w; j++) {
+            fscanf(fp, " %c", &charGrid[i][j]);
+        }
+    }
+
+    int landminesAmount = 0;
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < w; j++) {
+            if (charGrid[i][j] == '#')
+                landminesAmount += 1;
+        }
+    }
+
+    int count = 0;
+    int badCount = 0;
+    for (int i = 0; i < l; i++) {
+        for (int j = 0; j < w; j++) {
+            for (int k = 0; k < final_count; k++) {
+                if (coords[k].x == i && coords[k].y == j && coords[k].target)
+                {
+                    if (charGrid[i][j] == '#')
+                        count += 1;
+                    else if (charGrid[i][j] == '*')
+                        badCount += 1;
+                }
+            }
+        }
+    }
+
+    printf("\nAmount of landmines: %d\n", landminesAmount);
+    printf("Landmines found: %d\n", count);
+    printf("Double landmines hit (bad): %d\n", badCount);
+    printf("Accuracy: %d%%\n", count / landminesAmount * 100);
 }

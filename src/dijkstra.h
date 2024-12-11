@@ -22,5 +22,6 @@ int minRisk(Node tempGrid[l][w], int *min_x, int *min_y);
 void dijkstra(Node grid[l][w], int srcX, int srcY, int tarX, int tarY);
 void savePath(Node tempGrid[l][w], int x, int y, int isTarget);
 void printGrid();
+void algorithmAccuracy(Coord coords[final_count]);
 
 #endif // DIJKSTRA_H

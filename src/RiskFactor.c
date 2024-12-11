@@ -36,7 +36,7 @@ void riskFactor(Node grid[l][w]) {
                     grid[i][j] = (Node){i, j, rand()% 20 + 70, INF, 0, -1, -1};  // Random between 70-90
                     break;
                 case BB:
-                    grid[i][j] = (Node){i, j, rand()% 10 + 100, INF, 0, -1, -1};  // Random between 90-100
+                    grid[i][j] = (Node){i, j, rand()% 10 + 200, INF, 0, -1, -1};  // Random between 90-100
                     break;
                 default:
                     grid[i][j] = (Node){i, j, 0, INF, 0, -1, -1};  // Default for invalid entries
