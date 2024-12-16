@@ -1,12 +1,14 @@
 #include "dijkstra.h"
 
-// Coord path_coordinates[2500];
-Coord path_coordinates[10000];
+Coord path_coordinates[2500];
 int final_count = 0;
 int total_risk = 0;
+double accuracy = 0;
+int iteration = 0;
 
 void findMandatoryNodes(Node grid[l][w], Node nodes[l * w], Node startNode, int threshold, int* count) {
-    printf("\nFinding mandatory nodes...\n");
+    if (!isTest)
+        printf("\nFinding mandatory nodes...\n");
     startNode.risk = 0;
     nodes[0] = startNode;
     *count = 1;
@@ -25,7 +27,8 @@ void findMandatoryNodes(Node grid[l][w], Node nodes[l * w], Node startNode, int 
             }
         }
     }
-    printf("Amount of mandatory nodes with a threshold of %d%%: %d\n", threshold, *count);
+    if (!isTest)
+        printf("Amount of mandatory nodes with a threshold of %d%%: %d\n", threshold, *count);
 }
 
 void nearestNeighbor(int count, Node nodes[count])
@@ -62,10 +65,13 @@ void nearestNeighbor(int count, Node nodes[count])
         nodes[i] = routeCoordinate[i];
     }
 
-    printf("\nFinding shortest path...\n");
-    printf("Shortest and safest path from source (%d, %d) to destination (%d, %d):\n",
-        nodes[0].x, nodes[0].y,
-        nodes[count - 1].x, nodes[count - 1].y);
+    if (!isTest)
+    {
+        printf("\nFinding shortest path...\n");
+        printf("Shortest and safest path from source (%d, %d) to destination (%d, %d):\n",
+            nodes[0].x, nodes[0].y,
+            nodes[count - 1].x, nodes[count - 1].y);
+    }
 }
 
 int distance(Node a, Node b)
@@ -168,10 +174,10 @@ void savePath(Node tempGrid[l][w], int x, int y, int isTarget) {
 char* getGradientColor(int progress) {
     static char colorStr[50];  // Static to preserve the string across function calls
 
-    // Interpolate between light blue (RGB 0, 255, 255) and dark green (RGB 0, 128, 0) based on progress
-    int r = progress * 255 / 100;  // Transition from 0 (blue) to 255 (yellow)
-    int g = 255;                   // Keep green at full intensity
-    int b = 255 - (progress * 255 / 100);  // Transition from 255 (blue) to 0 (yellow)
+    // Interpolate between light blue and dark green and yellow
+    int r = progress * 255 / 100;
+    int g = 255;
+    int b = 255 - (progress * 255 / 100);
 
     // Format the color string in ANSI escape code format
     sprintf(colorStr, "\033[38;2;%d;%d;%dm", r, g, b);
@@ -186,45 +192,48 @@ void printGrid()
     coordinates[0] = (Coord){0, 0, 1};
     for (int i = 0; i < final_count; i++)
         coordinates[i + 1] = path_coordinates[i];
-    printf("Final count: %d coordinates\n", final_count);
-    printf("Entire list:\n");
-    for (int i = 0; i < final_count; i++) {
-        if (i != final_count - 1)
-            printf("(%d, %d) -> ", coordinates[i].x, coordinates[i].y);
-        else
-            printf("(%d, %d)", coordinates[i].x, coordinates[i].y);
-    }
 
-    printf("\n\nFinal route:");
-
-    int target = 0;
-    for (int x = 0; x < l; x ++)
-    {
-        printf("\n");
-        for (int y = 0; y < w; y++)
-        {
-            target = 0;
-            for (int i = 0; i < final_count; i++)
-            {
-                if (coordinates[i].x == x && coordinates[i].y == y)
-                {
-                    int progress = (i * 100) / (final_count - 1);  // Percentage of the path (0 to 100)
-                    char* color = getGradientColor(progress);
-
-                    // Print the X with the appropriate color
-                    if (coordinates[i].target)
-                        printf("%s# " RESET, color);  // Print "X" with gradient color
-                    else
-                        printf("%sx " RESET, color);
-                    target = 1;
-                    break;
-                }
-            }
-            if (!target)
-                printf(". ");
+    if (!isTest) {
+        printf("Final count: %d coordinates\n", final_count);
+        printf("Entire list:\n");
+        for (int i = 0; i < final_count; i++) {
+            if (i != final_count - 1)
+                printf("(%d, %d) -> ", coordinates[i].x, coordinates[i].y);
+            else
+                printf("(%d, %d)", coordinates[i].x, coordinates[i].y);
         }
+
+        printf("\n\nFinal route:");
+
+        int target = 0;
+        for (int x = 0; x < l; x ++)
+        {
+            printf("\n");
+            for (int y = 0; y < w; y++)
+            {
+                target = 0;
+                for (int i = 0; i < final_count; i++)
+                {
+                    if (coordinates[i].x == x && coordinates[i].y == y)
+                    {
+                        int progress = (i * 100) / (final_count - 1);  // Percentage of the path (0 to 100)
+                        char* color = getGradientColor(progress);
+
+                        // Print the X with the appropriate color
+                        if (coordinates[i].target)
+                            printf("%s# " RESET, color);  // Print "X" with gradient color
+                        else
+                            printf("%sx " RESET, color);
+                        target = 1;
+                        break;
+                    }
+                }
+                if (!target)
+                    printf(". ");
+            }
+        }
+        printf("\n");
     }
-    printf("\n");
     algorithmAccuracy(coordinates);
 }
 
@@ -246,6 +255,8 @@ void algorithmAccuracy(Coord coords[final_count])
         }
     }
 
+    fclose(fp);
+
     double count = 0;
     int badCount = 0;
     for (int i = 0; i < l; i++) {
@@ -261,11 +272,27 @@ void algorithmAccuracy(Coord coords[final_count])
             }
         }
     }
+    if (count / landminesAmount < 1)
+        accuracy += count / landminesAmount;
+    else
+        accuracy += 1;
+    iteration += 1;
 
-    printf("\nPath length: %d\n", final_count);
-    printf("Total risk: %d\n", total_risk);
-    printf("Amount of landmines: %.0lf\n", landminesAmount);
-    printf("Landmines found: %.0lf\n", count);
-    printf("Double landmines hit (bad): %d\n", badCount);
-    printf("Accuracy: %.2lf%%\n", count / landminesAmount * 100);
+    if (!isTest) {
+        printf("\nPath length: %d\n", final_count);
+        printf("Total risk: %d\n", total_risk);
+        printf("Amount of landmines: %.0lf\n", landminesAmount);
+        printf("Landmines found: %.0lf\n", count);
+        printf("Double landmines hit (bad): %d\n", badCount);
+        printf("Accuracy: %.2lf%%\n", accuracy * 100);
+    } else if (iteration == trialMax) {
+        printf("\nAverage path length: %d\n", final_count / iteration);
+        printf("Average total risk: %d\n", total_risk / iteration);
+        printf("Average amount of landmines hit: %.2lf%%\n", accuracy / iteration * 100);
+
+        iteration = 0;
+        final_count = 0;
+        total_risk = 0;
+        accuracy = 0;
+    }
 }

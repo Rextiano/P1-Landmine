@@ -13,7 +13,8 @@ void riskFactor(Node grid[l][w]) {
         // return 1;
     }
 
-    printf("Reading generated grid and choosing probability...\n");
+    if (!isTest)
+        printf("Reading generated grid and choosing probability...\n");
 
     // Read the grid data
     for (int i = 0; i < l; i++) {
@@ -50,7 +51,8 @@ void riskFactor(Node grid[l][w]) {
     // Then, apply +30 to '.' next to '#' if not already adjusted
     applyRisk(fileGrid, adjustedGrid, grid, 30, S, B);
 
-    printRiskGrid(grid);
+    if (!isTest)
+        printRiskGrid(grid);
 
     // Close the file
     fclose(fp);

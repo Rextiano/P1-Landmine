@@ -128,14 +128,17 @@ void placeBomb(int isDoubleBomb, int bombAmount, char grid[l][w])
 
 void printCharGrid(char grid[l][w], FILE *file)
 {
-    printf("\nGrid generated:\n");
+    if (!isTest)
+        printf("\nGrid generated:\n");
     // Print the final grid and save it to a file
     for (int i = 0; i < l; i++) {
         for (int j = 0; j < w; j++) {
-            printf("%c ", grid[i][j]);
+            if (!isTest)
+                printf("%c ", grid[i][j]);
             fprintf(file, "%c ", grid[i][j]);
         }
-        printf("\n");
+        if (!isTest)
+            printf("\n");
         fprintf(file, "\n");
     }
 }

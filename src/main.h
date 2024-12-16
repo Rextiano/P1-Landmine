@@ -22,9 +22,11 @@ typedef struct {
 // 'Extern' to be able to use global variables when called multiple times.
 // It tells the program that there will only be one instance
 extern int l, w;
+extern int isTest;
+extern int trialMax;
 
 // Function to clear input buffer because C is just like that
 void clearInputBuffer();
-void randomSolution(int srcX, int srcY, int tarX, int tarY);
+void monteCarlo(int length, int width);
 
 #endif // MAIN_H

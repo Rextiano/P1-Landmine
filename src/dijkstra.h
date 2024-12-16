@@ -10,7 +10,7 @@ typedef struct {
     int target;
 } Coord;
 
-extern Coord path_coordinates[10000];
+extern Coord path_coordinates[2500];
 extern int final_count;
 
 // Functions related to finding paths and processing nodes
