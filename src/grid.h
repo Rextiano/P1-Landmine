@@ -9,7 +9,7 @@
 #define BB '*' // Double bomb
 #define S '.'  // Safe space
 
-// Declare global variable (defined in a .c file)
+// Declare global variable (defined in LandmineGridGenerator.c)
 extern int gridExists;
 
 // Functions related to grid creation and manipulation

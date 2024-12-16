@@ -1,7 +1,9 @@
 #include "dijkstra.h"
 
-Coord path_coordinates[2500];
+// Coord path_coordinates[2500];
+Coord path_coordinates[10000];
 int final_count = 0;
+int total_risk = 0;
 
 void findMandatoryNodes(Node grid[l][w], Node nodes[l * w], Node startNode, int threshold, int* count) {
     printf("\nFinding mandatory nodes...\n");
@@ -12,6 +14,10 @@ void findMandatoryNodes(Node grid[l][w], Node nodes[l * w], Node startNode, int 
     //for loop that loops through the whole grid to check for each node that is above the threshold
     for (int i = 0; i < l; i++) { //loop through each row
         for (int j = 0; j < w; j++) { //loop though each column
+            if (i == startNode.x && j == startNode.y) {
+                continue; // Skip if it's the starting node
+            }
+
             risk = grid[i][j].risk;
             if (risk >= threshold && risk <= 100){
                 nodes[*count] = grid[i][j];
@@ -69,7 +75,7 @@ int distance(Node a, Node b)
 
 int isValid(int x, int y)
 {
-    return x >= 0 && x <= l && y >= 0 && y <= w; //Check if x and y are within bounds
+    return x >= 0 && x < l && y >= 0 && y < w; //Check if x and y are within bounds
 }
 
 int minRisk(Node tempGrid[l][w], int *min_x, int *min_y) {
@@ -146,13 +152,13 @@ void dijkstra(Node grid[l][w], int srcX, int srcY, int tarX, int tarY) {
     }
 }
 
-void savePath(Node grid[l][w], int x, int y, int isTarget) {
+void savePath(Node tempGrid[l][w], int x, int y, int isTarget) {
     // Base case, stop when no parent
-    if (grid[x][y].parentX == -1 && grid[x][y].parentY == -1)
+    if (tempGrid[x][y].parentX == -1 && tempGrid[x][y].parentY == -1)
         return;
 
-    savePath(grid, grid[x][y].parentX, grid[x][y].parentY, 0);
-    // printf(" -> (%d, %d)", x, y);
+    savePath(tempGrid, tempGrid[x][y].parentX, tempGrid[x][y].parentY, 0);
+    total_risk += tempGrid[x][y].risk;
     if (!isTarget)
         path_coordinates[final_count++] = (Coord){x, y, 0};
     else
@@ -231,21 +237,16 @@ void algorithmAccuracy(Coord coords[final_count])
     }
 
     char charGrid[l][w];
+    double landminesAmount = 0;
     for (int i = 0; i < l; i++) {
         for (int j = 0; j < w; j++) {
             fscanf(fp, " %c", &charGrid[i][j]);
-        }
-    }
-
-    int landminesAmount = 0;
-    for (int i = 0; i < l; i++) {
-        for (int j = 0; j < w; j++) {
             if (charGrid[i][j] == '#')
                 landminesAmount += 1;
         }
     }
 
-    int count = 0;
+    double count = 0;
     int badCount = 0;
     for (int i = 0; i < l; i++) {
         for (int j = 0; j < w; j++) {
@@ -261,8 +262,10 @@ void algorithmAccuracy(Coord coords[final_count])
         }
     }
 
-    printf("\nAmount of landmines: %d\n", landminesAmount);
-    printf("Landmines found: %d\n", count);
+    printf("\nPath length: %d\n", final_count);
+    printf("Total risk: %d\n", total_risk);
+    printf("Amount of landmines: %.0lf\n", landminesAmount);
+    printf("Landmines found: %.0lf\n", count);
     printf("Double landmines hit (bad): %d\n", badCount);
-    printf("Accuracy: %d%%\n", count / landminesAmount * 100);
+    printf("Accuracy: %.2lf%%\n", count / landminesAmount * 100);
 }
