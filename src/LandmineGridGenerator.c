@@ -1,12 +1,12 @@
 #include "grid.h"
 
 int gridExists = 0;
+int previousBombs = 0; // Variables to store previous settings
 
 // The program takes user-input and makes a minefield grid (for further processing) that has double laid bombs equal to 10% of normal bombs
 void userInput() {
-    int previousBombs = 0; // Variables to store previous settings
-
-    gridSettings(&previousBombs);
+    if (!l && !w)
+        gridSettings(&previousBombs);
 
     while (1) {
         int reply = 0;
@@ -62,16 +62,32 @@ void gridSettings(int *bombs) {
         return; // Exit function to reattempt
     }
 
-    printf("Enter the length and width of the landmine field (MAX size of 50x50):\n>");
+    int size;
 
+    printf("Enter the length of a single tile in meters:\n>");
+    if (scanf("%d", &size) != 1) {
+        printf("Invalid input. Please enter a viable size.\n");
+        clearInputBuffer(); // Clear the buffer to avoid infinite loops
+        return;
+    }
+
+    printf("Enter the length and width of the landmine field in meters:\n>");
     if (scanf("%d%d", &l, &w) != 2) {
         printf("Invalid input. Please enter a viable length and width.\n");
         clearInputBuffer(); // Clear the buffer to avoid infinite loops
         return;
     }
+    if (l < size || w < size) {
+        printf("Invalid size. Tiles are larger than grid\n");
+        clearInputBuffer();
+        return;
+    }
 
-    if (l > 50 || w > 50 || l < 0 || w < 0) {
-        printf("Grid size too large, must be below 51x51.\n");
+    l /= size;
+    w /= size;
+
+    if (l > 100 || w > 100 || l < 0 || w < 0) {
+        printf("Grid size too large to work with. Try having bigger tiles\n");
         return;
     }
 
@@ -128,17 +144,14 @@ void placeBomb(int isDoubleBomb, int bombAmount, char grid[l][w])
 
 void printCharGrid(char grid[l][w], FILE *file)
 {
-    if (!isTest)
-        printf("\nGrid generated:\n");
+    printf("\nGrid generated:\n");
     // Print the final grid and save it to a file
     for (int i = 0; i < l; i++) {
         for (int j = 0; j < w; j++) {
-            if (!isTest)
-                printf("%c ", grid[i][j]);
+            printf("%c ", grid[i][j]);
             fprintf(file, "%c ", grid[i][j]);
         }
-        if (!isTest)
-            printf("\n");
+        printf("\n");
         fprintf(file, "\n");
     }
 }

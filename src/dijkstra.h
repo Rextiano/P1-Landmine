@@ -26,5 +26,6 @@ void dijkstra(Node grid[l][w], int srcX, int srcY, int tarX, int tarY);
 void savePath(Node tempGrid[l][w], int x, int y, int isTarget);
 void printGrid();
 void algorithmAccuracy(Coord coords[final_count]);
+void resetValues();
 
 #endif // DIJKSTRA_H
